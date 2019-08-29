@@ -1,1 +1,33 @@
-<h1>Ciclo de Pagamentos</h1>
+<content-header name="Ciclos de Pagamento" small="cadastro"></content-header>
+<section class="content">
+    <div class="nav-tabs-custom" ng-controller="billingCtrl as bc">
+        <ul class="nav nav-tabs">
+            <li ng-if="bc.tabList" ng-class="{active: bc.tablist}">
+                <a href data-target='#tabList'  data-toggle="tab">
+                    <i class="fa fa-bars"></i>  Lista
+                </a>
+            </li>
+            <li ng-if="bc.tabCreate" ng-class="{active: bc.tabCreate}">
+                <a href data-target='#tabCreate' data-toggle="tab">
+                    <i class="fa fa-plus"></i>  Incluir
+                </a>
+            </li>
+            <li ng-if="bc.tabUpdate" ng-class="{active: bc.tabUpdate}">
+                <a href data-target='#tabUpdate'  data-toggle="tab">
+                    <i class="fa fa-pencil"></i>    Alterar
+                </a>
+            </li>
+            <li  ng-if="bc.tabRemove" ng-class="{active: bc.tabRemove}">
+                <a href data-target='#tabRemove' data-toggle="tab">
+                    <i class="fa fa-trash-o"></i>   Deletar
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="tabList"  ng-include="'billingCycle/list.html'" ng-class="{active: bc.tablist}"></div>
+            <div class="tab-pane" id="tabCreate" ng-if="bc.tabCreate" ng-include="'billingCycle/form.html'" ng-class="{active: bc.tabCreate}"></div>
+            <div class="tab-pane" id="tabUpdate" ng-if="bc.tabUpdate" ng-include="'billingCycle/form.html'" ng-class="{active: bc.tabUpdate}"></div>
+            <div class="tab-pane" id="tabRemove"  ng-if="bc.tabRemove" ng-include="'billingCycle/form.html'" ng-class="{active: bc.tabRemove}"></div>
+        </div>
+    </div>
+</section>

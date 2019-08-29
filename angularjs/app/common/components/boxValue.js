@@ -11,7 +11,7 @@ angular.module('primeiraApp').component('boxValue', {
         <div class="col-xs-4">
             <div class="small-box bg-{{ $ctrl.color }}">
                 <div class="inner">
-                    <h3>$ {{ $ctrl.value }}</h3>
+                    <h3> {{ $ctrl.value }}</h3>
                     <p>{{ $ctrl.title}}</p>
                 </div>
                 <div class="icon">
