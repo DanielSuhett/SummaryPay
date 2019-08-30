@@ -1,7 +1,7 @@
 <content-header name="Dashboard" small="1.1"></content-header>
 
 <section class="content" ng-controller="DashboardCtrl as ctrl">
-        <box-value color="green" title="Total de Créditos" icon="bank" value="R$ {{ ctrl.credit | number: 2 }}"></box-value>
-        <box-value color="red" title="Total de Débitos" icon="credit-card" value="R$ {{ ctrl.debt | number: 2 }}"></box-value>
-        <box-value color="blue" title="Valor Consolidado" icon="money" value="R$ {{ ctrl.value | number: 2 }}"></box-value>
+        <box-value grid="col-xs-12 col-sm-4" color="green" title="Total de Créditos" icon="bank" value="R$ {{ ctrl.credit | number: 2 }}"></box-value>
+        <box-value grid="col-xs-12 col-sm-4" color="red" title="Total de Débitos" icon="credit-card" value="R$ {{ ctrl.debt | number: 2 }}"></box-value>
+        <box-value grid="ccol-xs-12 col-sm-4" color="blue" title="Valor Consolidado" icon="money" value="R$ {{ ctrl.value | number: 2 }}"></box-value>
 </section>

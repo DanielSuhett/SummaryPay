@@ -3,12 +3,13 @@ angular.module('primeiraApp').component('boxValue', {
         color: '@',
         title: '@',
         icon: '@',
-        value: '@'
+        value: '@', 
+        grid: '@'
 
 
     },
     template: `    
-        <div class="col-xs-4">
+        <div class="{{ $ctrl.grid }}">
             <div class="small-box bg-{{ $ctrl.color }}">
                 <div class="inner">
                     <h3> {{ $ctrl.value }}</h3>

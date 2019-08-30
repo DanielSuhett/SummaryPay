@@ -1,11 +1,12 @@
 angular.module('primeiraApp').component('field', {
     bindings: {
+        readonly: '<',
         id: '@',
         grid: '@',
         label: '@',
         type: '@',
         placeholder: '@',
-        model: '='
+        model: '=',
     }, /* controller: [
         'gridSystem', 
         function(gridSystem) {
@@ -16,7 +17,7 @@ angular.module('primeiraApp').component('field', {
     <div class="col-xs-4">
         <div class="form-group">
             <label for="{{ $ctrl.id }}"> {{ $ctrl.label }}</label>
-            <input  id="{{ $ctrl.id }}" class="form-control" type="{{ $ctrl.type }}" ng-model="$ctrl.model" placeholder="{{ $ctrl.placeholder }}">
+            <input  id="{{ $ctrl.id }}" class="form-control" type="{{ $ctrl.type }}" ng-model="$ctrl.model" placeholder="{{ $ctrl.placeholder }}" ng-readonly="$ctrl.readonly" >
         </div>
     </div>
     `

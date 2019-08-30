@@ -1,8 +1,31 @@
 <div role="form">
     <div class="box-body">
-      <field id="Name" label="Nome" type="string" placeholder="Digite o nome" model="bc.billingCycle.name"></field>
-      <field id="Mes"  label="Mês" type="number" placeholder="Informe o mês" model="bc.billingCycle.month"></field>
-      <field id="Ano" label="Ano"  type="number" placeholder="Informe o ano" model="bc.billingCycle.year"></field>
+      <field readonly="bc.tabRemove" id="Name" label="Nome" type="string" placeholder="Digite o nome"  model="bc.billingCycle.name"></field>
+      <field readonly="bc.tabRemove" id="Mes"  label="Mês" type="number" placeholder="Informe o mês"   model="bc.billingCycle.month"></field>
+      <field readonly="bc.tabRemove" id="Ano" label="Ano"  type="number" placeholder="Informe o ano"   model="bc.billingCycle.year"></field>
+    
+      <div class="col-xs-12"> 
+        <fieldset>
+          <legend>Resumo</legend>
+          <div ng-include="'billingCycle/summary.html'"></div>
+        </fieldset>
+      </div>
+
+
+    <div class="col-xs-12 col-sm-6"> 
+      <fieldset>
+        <legend>Créditos</legend>
+        <div ng-include="'billingCycle/credit.html'"></div>
+      </fieldset>
+    </div>
+
+    <div class="col-xs-12 col-sm-6"> 
+      <fieldset>
+        <legend>Débitos</legend>
+        <div ng-include="'billingCycle/debt.html'"></div>
+      </fieldset>
+    </div>
+    
     </div>
 
     <div class="box-footer">
@@ -13,12 +36,14 @@
         </button>
 
         <button class="btn btn-info"
-        ng-if="bc.tabUpdate">
+        ng-if="bc.tabUpdate"
+        ng-click="bc.Update()">
         Alterar
        </button>
 
         <button class="btn btn-danger"
-        ng-if="bc.tabRemove">
+        ng-if="bc.tabRemove"
+        ng-click="bc.Remove()">
         Remover
         </button>
         <button class="btn btn-default" ng-click="bc.refresh()">Cancelar</button>

@@ -1,0 +1,5 @@
+<div class="row">
+        <box-value grid="col-xs-12 col-sm-4" color="green" title="Total de Créditos" icon="bank" value="R$ {{ bc.credit | number: 2 }}"></box-value>
+        <box-value grid="col-xs-12 col-sm-4" color="red" title="Total de Débitos" icon="credit-card" value="R$ {{ bc.debt | number: 2 }}"></box-value>
+        <box-value grid="col-xs-12 col-sm-4" color="blue" title="Valor Consolidado" icon="money" value="R$ {{ bc.total | number: 2 }}"></box-value>
+</div>
